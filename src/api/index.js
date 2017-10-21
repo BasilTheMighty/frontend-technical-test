@@ -1,19 +1,31 @@
 /**
-* This is an example request. Create your own using best practises for
-* handling asynchronous data fetching
-**/
+ * This is an example request. Create your own using best practises for
+ * handling asynchronous data fetching
+ **/
 
-export const getData = (cb) => {
-    const vehicles = new XMLHttpRequest();
-    vehicles.open('GET', 'http://localhost:9988/api/vehicle');
+//TODO http://localhost:9988 as config
+const baseUrl = `http://localhost:9988`;
 
-    vehicles.onreadystatechange = function() {
-        if(vehicles.readyState === 4) {
- 		    if(vehicles.status === 200) {
- 			    cb(vehicles.responseText);
-		    }
-		}
-	};
-
-	vehicles.send();
+const getData = (cb) => {
+    fetch(`${baseUrl}/api/vehicle`)
+        .then((response) => response.json())
+        .then((json) => {
+            cb({error: false, data: json});
+        })
+        .catch((err) => {
+            cb({error: err, data: null});
+        });
 };
+
+const getVehicle = (url, cb) => {
+    fetch(`${baseUrl}${url}`)
+        .then((response) => response.json())
+        .then((json) => {
+            cb({error: false, data: json});
+        })
+        .catch((err) => {
+            cb({error: err, data: null});
+        });
+};
+
+export {getData, getVehicle}
