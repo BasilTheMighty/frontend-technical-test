@@ -1,5 +1,54 @@
 $bg-colour: #ccc;
 
 body {
-	background-color: $bg-colour;
+  background-color: $bg-colour;
+}
+
+h3 {
+  color: black;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  letter-spacing: 0.07em;
+}
+
+h4 {
+  color: grey;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+
+.collapse-padding {
+  padding-left: 0.5px;
+  padding-right: 0.5px;
+}
+
+@media (max-width: 992px) {
+  .align-text {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.bg-white{
+  background: white
+}
+
+@media (min-width: 992px) {
+  .align-text {
+    height: 180px;
+    text-align: center;
+  }
+  h3 {
+    text-decoration:underline overline;
+    margin-bottom: 10px;
+  }
+  .row {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
 }

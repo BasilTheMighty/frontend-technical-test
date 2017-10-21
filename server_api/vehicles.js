@@ -4,6 +4,7 @@ module.exports = {
 			id: "xe",
 			modelYear: "k17",
 			url: "/api/vehicle/xe",
+			name: "Jaguar XE",
 			media: [
 				{
 					name: "vehicle",
@@ -15,6 +16,7 @@ module.exports = {
 			id: "xf",
 			modelYear: "k17",
 			url: "/api/vehicle/xf",
+            name: "Jaguar XF",
 			media: [
 				{
 					name: "vehicle",
@@ -25,6 +27,7 @@ module.exports = {
 		{
 			id: "xj",
 			modelYear: "k16",
+            name: "Jaguar XJ",
 			url: "/api/vehicle/xj",
 			media: [
 				{
@@ -36,6 +39,7 @@ module.exports = {
 		{
 			id: "fpace",
 			modelYear: "k17",
+            name: "Jaguar F-PACE",
 			url: "/api/vehicle/fpace",
 			media: [
 				{
@@ -47,6 +51,7 @@ module.exports = {
 		{
 			id: "ftype",
 			modelYear: "k17",
+            name: "Jaguar F-TYPE",
 			url: "/api/vehicle/ftype",
 			media: [
 				{
